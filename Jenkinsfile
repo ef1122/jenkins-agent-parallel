@@ -8,7 +8,7 @@ pipeline {
             parallel {
                 stage('Uppercase on Development1') {
                     agent {
-                        label 'Development1'
+                        label 'Development'
                     }
                     steps {
                             sh 'gcc -o uppercase uppercase.c'
