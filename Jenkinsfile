@@ -1,7 +1,7 @@
 pipeline {
     agent none
     environment {
-        MY_TEXT = 'Hello Jenkins'
+        MY_TEXT = 'example'
     }
     stages {
         stage('Parallel Stages') {
