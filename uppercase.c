@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <ctype.h>
                   
-int main() {
-    char text[] = "''' + MY_TEXT + '''";
+int main(int argc, char *argv[]) {
+    char text[] = argv[1];
     for(int i = 0; text[i]; i++){
         text[i] = toupper(text[i]);
     }

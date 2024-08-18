@@ -8,8 +8,8 @@ void reverse(char* str) {
          str[n - i - 1] = temp;
        }
     }
-int main() {
-   char text[] = "''' + MY_TEXT + '''";
+int main(int argc, char *argv[]) {
+   char text[] = argv[1];
    reverse(text);
    printf("Reversed: %s\\n", text);
    return 0;

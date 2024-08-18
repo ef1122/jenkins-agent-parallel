@@ -12,7 +12,7 @@ pipeline {
                     }
                     steps {
                             sh 'gcc -o uppercase uppercase.c'
-                            sh './uppercase'
+                            sh "./uppercase ${MY_TEXT}"
                         }
                 }
                 stage('Reverse on Development2') {
@@ -21,7 +21,7 @@ pipeline {
                     }
                     steps {              
                             sh 'gcc -o reverse reverse.c'
-                            sh './reverse'
+                            sh "./reverse ${MY_TEXT}"
                         }
                 }
             }
