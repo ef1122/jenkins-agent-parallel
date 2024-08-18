@@ -9,7 +9,7 @@ void reverse(char* str) {
        }
     }
 int main(int argc, char *argv[]) {
-   reverse(argv[1]);
+   char text=reverse(argv[1]);
    printf("Reversed: %s\\n", text);
    return 0;
 }
