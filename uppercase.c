@@ -2,8 +2,7 @@
 #include <ctype.h>
                   
 int main(int argc, char *argv[]) {
-    char text[] = argv[1];
-    for(int i = 0; text[i]; i++){
+    for(int i = 0; argv[1][i]; i++){
         text[i] = toupper(text[i]);
     }
     printf("Uppercase: %s\\n", text);
