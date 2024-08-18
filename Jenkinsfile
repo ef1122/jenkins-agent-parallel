@@ -1,18 +1,18 @@
 pipeline {
     agent none
     environment {
-        MY_TEXT = 'example'
+        TEXT = 'example'
     }
     stages {
         stage('Parallel Stages') {
             parallel {
-                stage('Uppercase on Development1') {
+                stage('Uppercase on Development') {
                     agent {
                         label 'Development'
                     }
                     steps {
                             sh 'gcc -o uppercase uppercase.c'
-                            sh "./uppercase ${MY_TEXT}"
+                            sh "./uppercase ${TEXT}"
                         }
                 }
                 stage('Reverse on Development2') {
@@ -21,7 +21,7 @@ pipeline {
                     }
                     steps {              
                             sh 'gcc -o reverse reverse.c'
-                            sh "./reverse ${MY_TEXT}"
+                            sh "./reverse ${TEXT}"
                         }
                 }
             }
