@@ -1,7 +1,7 @@
 pipeline {
     agent none
     environment {
-        TEXT = 'example'
+        TEXT = 'Eusebiu'
     }
     stages {
         stage('Parallel Stages') {
